@@ -1,0 +1,13 @@
+name: Greetings
+
+on: [pull_request, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: 'gracias por contrubuir a nuestro proyecto, revisaremos la solictud'
+        pr-message: 'que bueno que hagas un solictud de extraccion la tendremos en cuenta'
