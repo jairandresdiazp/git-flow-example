@@ -1,0 +1,48 @@
+{
+  "name": "git-flow-example",
+  "version": "1.0.0",
+  "description": "git flow example",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.11",
+    "@types/node": "^14.14.37",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
+    "eslint": "^7.23.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-plugin-import": "^2.22.1",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "typescript": "^4.2.3"
+  },
+  "main": "build/index.js",
+  "scripts": {
+    "lint": "eslint --ext jsx,ts,tsx",
+    "prebuild": "prettier --write \"**/*.{ts,tsx,jsx,json,css,graphql,gql}\"",
+    "build": "tsc",
+    "prestart": "npm run build",
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "lint-staged": {
+    "*.{jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jairandresdiazp/git-flow-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jairandresdiazp/git-flow-example/issues"
+  },
+  "homepage": "https://github.com/jairandresdiazp/git-flow-example#readme"
+}

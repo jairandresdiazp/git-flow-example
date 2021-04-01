@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "./build/",
+    "rootDir": "./src",
+    "lib": ["es6"],
+    "allowJs": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true
+  },
+  "include": ["./typings/*.d.ts", "./**/*.tsx", "./**/*.ts"]
+}
